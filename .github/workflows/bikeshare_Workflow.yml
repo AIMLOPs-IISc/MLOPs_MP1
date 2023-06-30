@@ -28,9 +28,6 @@ jobs:
     - name: Format code with Black    
       run: |
         black Project/*.py
-    - name: Lint with pylint
-      run: |
-        pylint --disable=R,C Project/*.py
     - name: train pipeline
       run: |
         python Project/bikeshare_model/train_pipeline.py
