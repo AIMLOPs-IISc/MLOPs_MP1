@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Install test requirements dependencies 
       run: |    
-        pip install -r Project/requirements/requirements.txt
+        pip install -r Project/requirements/test_requirements.txt
     - name: train pipeline
       run: |
         python Project/bikeshare_model/train_pipeline.py
