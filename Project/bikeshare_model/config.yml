@@ -1,0 +1,134 @@
+# Package Overview
+package_name: bikeshare_model
+
+# Data Files
+training_data_file: bike-sharing-dataset.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (Survival)
+target: cnt
+
+pipeline_name: bikeshare_model
+pipeline_save_file: bikeshare__model_output_v
+
+features:      # final features to be use
+  - season
+  - hr
+  - holiday 
+  - weekday 
+  - workingday
+  - weathersit
+  - temp
+  - atemp
+  - hum
+  - windspeed
+  - yr
+  - mnth 
+  - dteday
+  - casual
+  - registered   
+               
+#unused_fields:  # Features to drop before pipeline
+#Features are dropped in pipeline hence needed in preprocessing
+
+# Features inside processing pipeline
+
+weekday_var: weekday  # first imputatation , then --> Mappeing
+dteday_var: dteday
+len_var : 3
+weathersit_var: weathersit
+yr_var: yr
+mnth_var: mnth
+season_var: season
+holiday_var: holiday
+workingday_var: workingday
+hr_var: hr
+temp_var: temp
+atemp_var: atemp
+hum_var: hum
+windspeed_var: windspeed
+
+lower_bound_var: '25%'
+upper_bound_var: '75%'
+
+dict_yr:
+  2011: 0
+  2012: 1
+
+dict_mnth:
+  January: 0
+  February: 1
+  December: 2
+  March: 3
+  November: 4
+  April: 5
+  October: 6
+  May: 7
+  September: 8
+  June: 9
+  July: 10
+  August: 11
+
+dict_season:
+  spring: 0
+  winter: 1
+  summer: 2
+  fall: 3
+
+dict_weathersit:
+  Heavy Rain: 0
+  Light Rain: 1
+  Mist: 2
+  Clear: 3
+
+dict_holiday:
+  Yes: 0
+  No: 1
+
+dict_workingday:
+  No: 0
+  Yes: 1
+
+dict_hr:
+  4am: 0
+  3am: 1
+  5am: 2
+  2am: 3
+  1am: 4
+  12am: 5
+  6am: 6
+  11pm: 7
+  10pm: 8
+  10am: 9
+  9pm: 10
+  11am: 11
+  7am: 12
+  9am: 13
+  8pm: 14
+  2pm: 15
+  1pm: 16
+  12pm: 17
+  3pm: 18
+  4pm: 19
+  7pm: 20
+  8am: 21
+  6pm: 22
+  5pm: 23
+ 
+# set train/test split
+test_size: 0.20
+
+# to set the random seed
+random_state: 42
+# alogrithm parameters
+n_estimators: 150
+max_depth: 5
+
+
+
+
+
+
+
+
