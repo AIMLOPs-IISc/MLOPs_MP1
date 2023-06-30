@@ -27,7 +27,7 @@ jobs:
         pip install -r Project/requirements/test_requirements.txt
     - name: Format code with Black    
       run: |
-        black *.py
+        black Project/*.py
     - name: train pipeline
       run: |
         python Project/bikeshare_model/train_pipeline.py
