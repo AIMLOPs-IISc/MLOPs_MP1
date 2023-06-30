@@ -31,4 +31,13 @@ jobs:
     - name: test with pytest
       run: |
         pytest
+    - name: Lint with pylint
+      run: |
+        make lint
+    - name: test with pyfest    
+      run: |
+        make test
+    - name: Format code with Black    
+      run: |
+        make format
  
