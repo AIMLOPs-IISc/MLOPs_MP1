@@ -6,7 +6,7 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 # Package meta-data.
-NAME =                "bikeshare_model"
+NAME =                   "bikeshare_model"
 DESCRIPTION = "bikeshare dataset classification model package "
 EMAIL = "------"
 AUTHOR = "----------"
